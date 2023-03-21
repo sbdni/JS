@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+	var i=0;
+	var sum=0;
+	while(i<=100)
+	{
+		if(i%2==0)
+		{
+			sum=sum+i;
+		}
+		i++;
+	}
+	document.write("<h3>"+sum+"</h3>");
+	 var sum=0;
+	for(var i=1;i<=100;i++)
+	{
+		if(i%2==0)
+		{
+			sum=sum+i;
+		}
+	}
+	document.write("<h3>"+sum+"</h3>");
+	var i,j=0,k=0;
+	for(i=1;i<=5;i++)
+	{
+		j=i*50;
+		k++;
+			 document.write("该员工第"+k+"年增加的工资为"+j+"<br>")
+	}
+	var i=1,j=0,k=0;
+	while(i<=5&&k<=5)
+	{
+		j=i*50;
+	i++;
+	k++;
+	document.write("该员工第"+k+"年增加的工资为"+j+"<br>")
+	}
+	document.write("<center>");
+ var i=1,j=1;
+ for(i=1;i<=5;i++)
+ {
+	 for(j=1;j<=2*i-1;j++)
+	 {
+		 document.write("*");
+	 }
+	 document.write("<br>");
+ }
+ document.write("</p>");
+ document.write("<center>");
+ var sum=5;
+ var i=1;
+ var j=1;
+ var n='';
+ while(i<=5)
+ {
+ 	while(j<=i)
+ 	{
+ 		n+="*";
+ 		document.write(n);
+ 		document.write("&nbsp");
+ 		j++;
+ 	}
+ 	document.write('<br>');
+ 	i++;
+ }
+		</script>
+	</body>
+</html>

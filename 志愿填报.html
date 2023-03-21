@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script>
+		var a,b;
+		a=prompt("请输入你的高考成绩");
+		b=prompt("请输入你的英语成绩");
+		if(a>=600){
+			alert('可以报考重点大学')
+			if(b>=130){
+				alert('可以读英语口译专业')
+			}
+			else{
+				alert('不够资格读英语口译专业')
+			}
+		}
+		else if (a>=500&&a<600){
+			alert('只能报考普通大学')
+		}
+		else if (a>=300&&a<500){
+			alert('只能报考大专')
+		}
+		else{
+			alert('复读或者搬砖')
+		}
+		
+		</script>
+	</body>
+</html>

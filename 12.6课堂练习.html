@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+		// 	1.把数组中的元素按字符串长度从小到大的顺序进行排列输出原数组(js，html5，css3，php)(按照给定的顺序建立数组，不可调换顺序)
+		var arr1=["JS","html5","css3","php"];
+		var nab=arr1;
+		nab.sort(function(a,b){return a.length-b.length})
+		document.write(nab+"<hr />");
+		// 	2.某同学数学80分，语文85分，英语76分，化学88分，物理91分，要求对该同学的科目成绩排序从小到大sort（），对应上科目输出；（按照给定的顺序建立数组，不可调换顺序）
+		var arra=new Array()
+		var arr2=[80,85,76,88,91];
+		var cad=arr2;
+		cad.sort(function(a,b){return a-b});
+		for(var i=0;i<=5-1;i++){
+			switch(cad[i]){
+				case 80:
+				document.write("数学"+cad[i]);
+				break;
+				case 85:
+				document.write("语文"+cad[i]);
+				break;
+				case 76:
+				document.write("英语"+cad[i]);
+				break;
+				case 88:
+				document.write("化学"+cad[i]);
+				break;
+				case 91:
+				document.write("物理"+cad[i]+"<hr />");
+				break;
+			}
+		}	
+		// 	3.比赛中打分，某选手得分分别为95，90，89，91，96(按照给定的顺序建立数组，不可调换顺序)得分是按照去掉一个最高分，去掉一个最低分，最后平均分为最终得分，要求输出该选手最终得分
+		// 定义数组
+		var arr8=[95,90,89,91,96];
+		var temp=arr8;
+		temp.sort();
+		var totals=0;
+		for (var i=1;i<temp.length-1;i++){
+			totals+=temp[i];
+		}
+		document.write(totals/(temp.length-2));
+		document.write("<hr />");
+		// 	4.<<奔跑吧，姐妹>>原定选手是张三，李四，王五，赵六，钱七，后因为王五，赵六有事退出，补位选手为孙八，周九。请输出原参加的选手名单及补位后选手名单
+		var arr6=["张三","李四","王五","赵六","钱七"];
+		var arr7=["孙八","周九"];
+		// 从arr6中的“王五”往后删一位
+		arr6.splice(arr6.indexOf("王五"),1)
+		// 从arr6中的“赵六”往后删一位
+		arr6.splice(arr6.indexOf("赵六"),1)
+		// 把arr6和arr7连接成一个数组
+		var ihc= arr6.concat(arr7)
+		// 输出这个数组
+		document.write(ihc+"<hr />");
+		// 	5.5个员工，关羽，张飞，赵云，马超，黄忠，工资分别为8000，6500，7000，6000，5500，要求按照工资从高到低输出每个人的工资(按照给定的顺序建立数组，不可调换顺序)
+		var arr4=[8000,6500,7000,6000,5500];
+		var arr5=["关羽","张飞","赵云","马超","黄忠"];
+		var bns=arr4;
+		var bnd=[];
+		bns.sort();
+		for (var i=0;i<bns.length;i++) {
+			bnd[i]=arr4.indexOf(bns[i]);
+		}
+		for (var i=0;i<bnd.length;i++) {
+			document.write(arr5[i]+arr4[bnd[i]]);
+		}
+		document.write("<hr />");
+		 </script>
+	</body>
+</html>

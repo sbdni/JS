@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 1.用*输出一个三角
+			var i,j;
+			for(i=1;i<=5;i++)
+			{
+				 for(j=1;j<=5-i;j++)
+				 {
+					 document.write("&nbsp;&nbsp;");
+				 }
+				 for(j=1;j<=i;j++)
+				 {
+					document.write("*"); 
+					document.write("&nbsp;&nbsp;&nbsp;");
+				 }
+				 document.write("<br>");
+			}
+			// 2.乘法表
+			var i,j;
+			for(i=0;i<=9;i++)
+			{
+				for(j=1;j<=i;j++)
+				{
+					if(i==j)
+					{
+						document.write(j+'*'+i+'='+i*j)
+					}
+					else
+					{
+						document.write(j+'*'+i+'='+i*j+"&nbsp;&nbsp;&nbsp;")
+					}
+				}
+				document.write("<br />")
+			}
+			document.write("<br />")
+			// 3.倒乘法表
+			var i,j;
+			for(i=9;i>=1;i--)
+			{
+				for(j=1;j<=i;j++)
+				{
+					if(i==j)
+					{
+						document.write(j+'*'+i+'='+i*j+"<br>")
+					}
+					else
+					{
+						document.write(j+'*'+i+'='+i*j+"&nbsp;&nbsp;&nbsp;")
+					}
+				}
+			}document.write("<br />")
+			// 4.现有100两银子，买100只鸡，公鸡5两银子1只，母鸡3两银子1只，小鸡1两银子3只。问几种买法
+			var i=5;
+			var j=3;
+			var x=1/3;
+			var a,b,c;
+			var sum=0;
+			for(a=0;a<=100;a++)
+			for(b=0;b<=100;b++)
+			for(c=0;c<=100;c++)
+			if(a+b+c==100&&a*i+b*j+c*x==100)
+			{
+				document.write(a+"公鸡"+b+"母鸡"+c+"小鸡")
+				sum++;
+				document.write("<br>")
+			}
+			document.write(sum+"种买法")
+			document.write("<br />")
+			document.write("<br />")
+			var g,m,x;
+			for(g=1;g<=20;g++)
+			{
+				for(m=1;m<=33;m++)
+				{
+					for(x=3;x<=300;x+=3)
+					{
+						if(g+m+x==100&&5*g+3*m+3*m+x/3==100)
+						{
+							document.write(g+"公鸡"+m+"母鸡"+x+"小鸡");
+							document.write("<hr>");
+						}
+					}
+				}
+			}
+			document.write("<br />")
+			// 5.0分为0分，60分以上及格，70分以上中等，八十分以上良好，90分以上优秀，100分为满分，60分以下不及格；用switch输出
+			var a,b,c;
+			b=prompt("请输入成绩");
+			a=parseInt(b);
+			switch(a)
+			{
+				case 0:
+				x="0分";
+				break;
+				case 60:
+				x="及格";
+				break;
+				case 70:
+				x="中等";
+				break;
+				case 80:
+				x="良好";
+				break;
+				case 90:
+				x="优秀";
+				break;
+				case 100:
+				x="满分";
+				break;
+				default:
+				x="不及格";
+			}
+			document.write(x); 
+		</script>
+	</body>
+</html>
