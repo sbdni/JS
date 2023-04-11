@@ -5,7 +5,13 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 	<title></title>
-	<input type="button" value="点击之后" id="but"\>
+	<style>
+		.box {
+			background-color: chartreuse;
+			width: 50px;
+			height: 50px;
+		}
+	</style>
 	<!--<button  id='But' onclick="but">Click here</button><input type="text" id="a" />-->
 	<!--<input type="button" id="btn" value="点击之前" />
 	<script type="text/javascript">
@@ -14,7 +20,27 @@
 		}
 	</script>-->
 </head>
-<body>
+<body bgcolor="pink">
+	<center><div id="box" class="box"></div></center>
+	<script>
+		var i=0;
+		box.onclick=function hz(){
+			++i;
+			if(i%2){
+				box.style.width='100px';
+				box.style.height='100px';
+				box.style.background='yellow'
+			}
+			else{
+				box.style.width='25px';
+				box.style.height='25px';
+				box.style.background='red'
+			}
+		}
+		window.onbeforeunload=function (e){
+			alert("您一共点击了"+i+"次")
+		}
+	</script>
 	<!--<script type="text/javascript">
 		var i=0;
 		But.onclick=function but(){
@@ -22,6 +48,7 @@
 			document.getElementById('a').value=i;
 		}
 	</script>-->
+	<input type="button" value="点击之后" id="but"\>
 	<script type="text/javascript">
 		window.onload=function(){
 				but.onclick=function oBut(){
@@ -31,15 +58,11 @@
 				alert("今天是"+sj+'\n'+"现在是"+sh);
 				}
 		}
-	</script>
-	<script type="text/javascript">
-		var d1=0;
-		function(){d1=new Date();}
-		window.onbeforeunload=onbeforeunload_handler();
-		function onbeforeunload_handler(){
-			var d2=new Date();
-			alert(d1+d2);
-		}
+		window.onbeforeunload=function (e){
+				a1=new Date();
+				m1=a1.getSeconds()-m;
+				alert('您一共在此页面停留'+m1+"秒")
+			}
 	</script>
 	<!--<script type="text/javascript">
 		btn.onclick=function oBtn(){

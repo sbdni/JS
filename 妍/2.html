@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style>
+			.box {
+				background-color: chartreuse;
+				width: 50px;
+				height: 50px;
+			}
+		</style>
+	</head>
+	<body bgcolor="pink">
+		<center><div id="box" class="box"></div></center>
+		<script>
+			var i=0;
+			box.onclick=function hz(){
+				++i;
+				if(i%2){
+					box.style.width='100px';
+					box.style.height='100px';
+					box.style.background='yellow'
+				}
+				else{
+					box.style.width='25px';
+					box.style.height='25px';
+					box.style.background='red'
+				}
+			}
+			window.onbeforeunload=function (e){
+				alert("您一共点击了"+i+"次")
+			}
+		</script>
+	</body>
+</html>
