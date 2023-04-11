@@ -70,9 +70,15 @@
         // document.write("QQ号为"+a);
         var str="To be or not be,that's a qusetion";
         var a=str.indexOf ("t");
-        document.write("t第一次出现的位置是"+a);
+        document.write("t第一次出现的位置是:"+a);
         b=str.charAt("7");
-        document.write("<br>第7号位上的字将串是"+b);
+        document.write("<br>第7号位上的字将串是:"+b);
+        c=str.lastIndexOf("t");
+        document.write("<br>t最后一次出现的位置是:"+c);
+        d=str.slice("16");
+        document.write("<br>显示出:"+d);
+        e=str.slice(25,33);
+        document.write("<br>转为大写为:"+e.toUpperCase());
     </script>
 </body>
 </html>

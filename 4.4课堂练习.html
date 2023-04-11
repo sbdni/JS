@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<div align="center">
+	<p>春晓</p>
+	<p>春眠不觉晓，</p>
+	<p>处处闻啼鸟。</p>
+	<p>夜来风雨声，</p>
+	<p id="b"></p>
+	</div>
+	请填写最后一句：<input type="text" id="b1" /> <input type="button"  value="添加" onclick=" abc();"/>
+	<div class="box" id="box"></div>
+	<style type="text/css">
+		div {
+			height: 200px;
+			width: 250px;
+			background-color:  goldenrod;
+			font-family: "幼圆";
+			font-size: 22px;
+		}
+		.box{
+			width: 150px;
+			height: 150px;
+			background: red;
+			margin:0 auto;
+		}
+	</style>
+</head>
+<body>
+	<script type="text/javascript">
+		function abc(){
+			document.getElementById('b').innerHTML=document.getElementById('b1').value;
+		}
+	</script>
+		
+	<script type="text/javascript">
+		var i=0;
+		box.onclick=function dj(){
+			++i;
+			if(i%2){
+				box.style.width="200px";
+				box.style.height="200px";
+				box.innerHTML="大";
+				box.style.backgroundColor="blue";
+			}
+			else{
+				box.style.width="50px";
+				box.style.height="50px";
+				box.innerHTML="小";
+				box.style.backgroundColor="yellow";
+			}
+			alert("你刚才一共点击了"+i+"次。");
+		}
+	</script>
+</body>
+</html>

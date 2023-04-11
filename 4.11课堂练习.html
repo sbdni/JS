@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title></title>
+	<input type="button" value="点击之后" id="but"\>
+	<!--<button  id='But' onclick="but">Click here</button><input type="text" id="a" />-->
+	<!--<input type="button" id="btn" value="点击之前" />
+	<script type="text/javascript">
+		atn.onclick=function oAtn(){
+			document.getElementById('atn').value='zz';
+		}
+	</script>-->
+</head>
+<body>
+	<!--<script type="text/javascript">
+		var i=0;
+		But.onclick=function but(){
+			++i;
+			document.getElementById('a').value=i;
+		}
+	</script>-->
+	<script type="text/javascript">
+		window.onload=function(){
+				but.onclick=function oBut(){
+				var time=new Date();
+				var sj=time.toLocaleDateString();
+				    sh=time.toLocaleTimeString();
+				alert("今天是"+sj+'\n'+"现在是"+sh);
+				}
+		}
+	</script>
+	<script type="text/javascript">
+		var d1=0;
+		function(){d1=new Date();}
+		window.onbeforeunload=onbeforeunload_handler();
+		function onbeforeunload_handler(){
+			var d2=new Date();
+			alert(d1+d2);
+		}
+	</script>
+	<!--<script type="text/javascript">
+		btn.onclick=function oBtn(){
+			document.getElementById('btn').value='sb';
+		}
+	</script>
+	<input type="button" id="atn" value="提交" />-->
+</body>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="{CHARSET}">
+		<meta charset="utf-8">
+		<title>湖北生态六合彩</title>
+		<center>
+			<div><h1><b>湖北生态六合彩页面</b></h1><hr></div>
+			<input type="text" id="sjs1" style="background-color: red;height:20px;width:20px;border-radius: 90px;">
+			<input type="text" id="sjs2" style="background-color: green;height:20px;width:20px;border-radius: 90px;">
+			<input type="text" id="sjs3" style="background-color: yellow;height:20px;width:20px;border-radius: 90px;">
+			<input type="text" id="sjs4" style="background-color: deeppink;height:20px;width:20px;border-radius: 90px;">
+			<input type="text" id="sjs5" style="background-color: pink;height:20px;width:20px;border-radius: 90px;">
+			<input type="text" id="sjs6" style="background-color: brown;height:20px;width:20px;border-radius: 90px;"><br>
+			<hr><button onclick="1hc();">点击此处抽奖</button>
+		<center><button onclick="tz();">停止</button></center>	
+	</head>
+	<body>
+  <script type="text/javascript">
+  	function 1hc(){
+  		window.document.getElementById('sjs1').value=Math.floor(Math.random()*99);
+  		window.document.getElementById('sjs2').value=Math.floor(Math.random()*99);
+  		window.document.getElementById('sjs3').value=Math.floor(Math.random()*99);
+  		window.document.getElementById('sjs4').value=Math.floor(Math.random()*99);
+  		window.document.getElementById('sjs5').value=Math.floor(Math.random()*99);
+  		window.document.getElementById('sjs6').value=Math.floor(Math.random()*99);
+  		timer=setTimeout('1hc()',50);
+  	}
+  	function tz(){
+  		clearTimeout(timer);
+  		alert("您刚才抽奖的号码是:"+String(window.document.getElementById('sjs1').value)+"   "+String(window.document.getElementById('sjs2').value)+"   "+String(window.document.getElementById('sjs3').value)+"   "+String(window.document.getElementById('sjs4').value)+"   "+String(window.document.getElementById('sjs5').value)+"   "+String(window.document.getElementById('sjs6').value))
+  	}
+  </script>
+	</body>
+</html>

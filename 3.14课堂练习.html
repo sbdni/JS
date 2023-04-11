@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<!--请输入你的分数：<input type="text" name="fs" id="fs">
+	<button onclick="qz();">确定分数</button>-->
+</head>
+<body>
+	<form>
+      <table>
+      	<caption>购物车结算页面</caption>
+          <tr>
+            <td> 商品名称：</td>
+            <td><input type="text" name="a" id="a" value=""/></td>
+          </tr>
+          <tr>
+          <td> 商品单价： </td>
+          <td><input type="number" name="m" id="m" value=""/></td>
+          </tr>
+          <tr>
+          <td> 购买数量： </td>
+          <td><input type="number" name="q" id="q" value=""/></td>
+          </tr>
+          <tr>
+            <td colspan="2"><button onclick="aa()" >确定</button><input type="reset" value="取消" />
+          </tr>
+      </table>
+    </form>
+    <script type="text/javascript">
+    	function aa(){
+    		var e,f,g;
+    		e=document.getElementById('a').value;
+    		f=document.getElementById('m').value;
+    		g=document.getElementById('q').value;
+    		h=f*g;
+    		window.alert("您购买的商品名称为："+e+"商品总价为："+h);
+    	}
+    </script>
+	<form>
+      <table>
+      	<caption>注册页面</caption>
+          <tr>
+            <td> 请输入用户名：</td>
+            <td><input type="text" name="a" id="a" value=""/></td>
+          </tr>
+          <tr>
+          <td> 请输入密码： </td>
+          <td><input type="password" name="m" id="m" value=""/></td>
+          </tr>
+          <tr>
+          <td> 请确认密码： </td>
+          <td><input type="password" name="q" id="q" value=""/></td>
+          </tr>
+          <tr>
+            <td colspan="2"><button onclick="aa()" >注册</button><input type="reset" value="取消" />
+          </tr>
+      </table>
+    </form>
+    <script type="text/javascript">
+    	function aa(){
+    		var e,f,g;
+    		e=document.getElementById('a').value;
+    		if(e.length>8){
+    			window.alert("您输入的用户名过长");
+    		}
+    		f=document.getElementById('m').value;
+    		g=document.getElementById('q').value;
+    		if(f!=g){
+    			window.alert("您两次输入的密码不同");
+    		}
+    		 else{
+    		 	window.alert("注册成功");
+    		 }
+    	}
+    </script>
+    <script type="text/javascript">
+		function qz(){
+			var c=document.getElementById('fs').value;
+			if(c>=0&&c<60){
+				alert("不及格");
+			}
+			else if(c>=60&&c<=100){
+				alert("恭喜你，及格了!");
+			}
+			else{
+				alert("请重新输入成绩");
+			}
+		}
+	</script>
+</body>
+</html>
