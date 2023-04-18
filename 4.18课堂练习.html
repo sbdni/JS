@@ -67,36 +67,36 @@
 	</div>
 	<script type="text/javascript">
 		const colors = [
-		  { id: 'red', time: 20, defaultColor: 'grey', activeColor: 'red' },
-		  { id: 'yellow', time: 3, defaultColor: 'grey', activeColor: 'yellow' },
-		  { id: 'green', time: 10, defaultColor: 'grey', activeColor: 'green' },
+		  { id: 'red', time: 20, defaultColor: 'grey', activeColor: 'red' },//设置颜色数组
+		  { id: 'yellow', time: 3, defaultColor: 'grey', activeColor: 'yellow' },//设置颜色数组
+		  { id: 'green', time: 10, defaultColor: 'grey', activeColor: 'green' },//设置颜色数组
 		];
 	  
-		let currentColorIndex = 0;
-		let currentTime = colors[currentColorIndex].time;
+		let currentColorIndex = 0;//当前颜色索引
+		let currentTime = colors[currentColorIndex].time;//当前时间
 	  
-		function updateColor() {
-		  colors.forEach((color, index) => {
-			const element = document.getElementById(color.id);
-			if (index === currentColorIndex) {
-			  element.style.backgroundColor = color.activeColor;
-			} else {
-			  element.style.backgroundColor = color.defaultColor;
+		function updateColor() {//更新颜色
+		  colors.forEach((color, index) => {//遍历数组
+			const element = document.getElementById(color.id);//获取元素
+			if (index === currentColorIndex) {//判断是否是当前颜色
+			  element.style.backgroundColor = color.activeColor;//设置背景颜色
+			} else {//不是当前颜色
+			  element.style.backgroundColor = color.defaultColor;//设置背景颜色
 			}
 		  });
 		}
 	  
-		function updateTimer() {
-		  document.getElementById('time').innerHTML = currentTime;
-		  if (currentTime === 0) {
-			currentColorIndex = (currentColorIndex + 1) % colors.length;
-			currentTime = colors[currentColorIndex].time;
-		  } else {
-			currentTime--;
+		function updateTimer() {//更新时间
+		  document.getElementById('time').innerHTML = currentTime;//设置时间
+		  if (currentTime === 0) {//判断时间是否为0
+			currentColorIndex = (currentColorIndex + 1) % colors.length;//设置当前颜色索引
+			currentTime = colors[currentColorIndex].time;//设置当前时间
+		  } else {//时间不为0
+			currentTime--;//时间减一
 		  }
-		  updateColor();
+		  updateColor();//更新颜色
 		}
-		setInterval(updateTimer, 1000);
+		setInterval(updateTimer, 1000);//设置定时器
 	  </script>
 </body>
 </html>
