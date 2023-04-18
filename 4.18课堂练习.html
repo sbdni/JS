@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		ul{
+			width: 300px;
+			height: 150px;
+			margin: 60 auto;
+		}
+		li{
+			list-style: none;
+			width: 50px;
+			height: 50px;
+			background-color: grey;
+			float: left;
+			border-radius: 50%;
+			margin-left: 10px;
+		}
+		div{
+			width: 50px;
+			height: 50px;
+			background-color: grey;
+			float: left;
+			margin-left: 10px;
+			font-size: 40px;
+			text-align: center;
+			color: red;
+			background-color: black;
+		}
+	</style>
+</head>
+<body>
+	<!--<input type="button" value="添加科目并改变颜色" onclick='gb();'>
+	<script type="text/javascript">
+			var arr=['HTML','CSS','JAVA','PHP','Vue'];
+			var arrcolor=['red','green','blue','yellow','hotpink'];
+			function gb(){
+				var oUl=document.getElementById('list');
+				var oLi=oUl.getElementsByTagName('li');
+			for(var i=0;i<oLi.length;i++){
+				oLi[i].innerHTML=arr[i];
+				oLi[i].style.color=arrcolor[i];
+				}
+			}
+	</script>
+	<ul id="list">科目
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>-->
+	<ul>
+		<li id="red"></li>
+		<li id="yellow"></li>
+		<li id="green"></li>
+		<div id="time"></div>
+	</ul>
+	<script type="text/javascript">
+		var now=10;
+		var flag=1;
+		function fun(){
+			document.getElementById('time').innerHTML=now;
+			if(flag==1){
+				if(now>=1){
+					document.getElementById('red').style.backgroundColor='red';
+				}
+				else{
+					now=3;
+					flag=3;
+					document.getElementById('red').style.backgroundColor='grey';
+				}
+			}
+			if(flag==3){
+				if(now>=1){
+					document.getElementById('yellow').style.backgroundColor='yellow';
+				}
+				else{
+					now=10;
+					flag=2;
+					document.getElementById('yellow').style.backgroundColor='grey';
+				}
+			}
+			if(flag==2){
+				if(now>=1){
+					document.getElementById('green').style.backgroundColor='green';
+				}
+				else{
+					now=10;
+					flag=1;
+					document.getElementById('green').style.backgroundColor='grey';
+				}
+			}
+		}
+		setInterval("fun()",1000)
+	</script>
+</body>
+</html>

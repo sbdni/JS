@@ -12,13 +12,6 @@
 			height: 50px;
 		}
 	</style>
-	<!--<button  id='But' onclick="but">Click here</button><input type="text" id="a" />-->
-	<!--<input type="button" id="btn" value="点击之前" />
-	<script type="text/javascript">
-		atn.onclick=function oAtn(){
-			document.getElementById('atn').value='zz';
-		}
-	</script>-->
 </head>
 <body bgcolor="pink">
 	<center><div id="box" class="box"></div></center>
@@ -41,34 +34,26 @@
 			alert("您一共点击了"+i+"次")
 		}
 	</script>
-	<!--<script type="text/javascript">
-		var i=0;
-		But.onclick=function but(){
-			++i;
-			document.getElementById('a').value=i;
-		}
-	</script>-->
-	<input type="button" value="点击之后" id="but"\>
+	<!--<input type="button" value="点击之后" id="but" \>
 	<script type="text/javascript">
+		var a,n,y,r,s,f,m,a1,m1;
 		window.onload=function(){
 				but.onclick=function oBut(){
-				var time=new Date();
-				var sj=time.toLocaleDateString();
-				    sh=time.toLocaleTimeString();
-				alert("今天是"+sj+'\n'+"现在是"+sh);
-				}
+				a=new Date();
+				n=a.getFullYear();
+				y=a.getMonth()+1;
+				r=a.getDay()+9;
+				s=a.getHours();
+				f=a.getMinutes();
+				m=a.getSeconds();
+            alert("今天是:"+n+"年"+y+"月"+r+"日\n "+s+"时"+f+"分"+m+"秒");
+			}
 		}
 		window.onbeforeunload=function (e){
 				a1=new Date();
 				m1=a1.getSeconds()-m;
-				alert('您一共在此页面停留'+m1+"秒")
+				alert('您一共在此页面停留'+m1+"秒");
 			}
-	</script>
-	<!--<script type="text/javascript">
-		btn.onclick=function oBtn(){
-			document.getElementById('btn').value='sb';
-		}
-	</script>
-	<input type="button" id="atn" value="提交" />-->
+	</script>-->
 </body>
 </html>
