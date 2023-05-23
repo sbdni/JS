@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+<body>
+	<input type="button" value="添加科目并改变颜色" onclick='gb();'>
+		<script type="text/javascript">
+				var arr=['HTML','CSS','JAVA','PHP','Vue'];
+				var arrcolor=['red','green','blue','yellow','hotpink'];
+				function gb(){
+					var oUl=document.getElementById('list');
+					var oLi=oUl.getElementsByTagName('li');
+				for(var i=0;i<oLi.length;i++){
+					oLi[i].innerHTML=arr[i];
+					oLi[i].style.color=arrcolor[i];
+					}
+				}
+		</script>
+		<ul id="list">科目
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+</body>
+</html>
